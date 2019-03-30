@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Heróis
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div class="top">
+    <ion-button (click)="atualizar()">Atualizar</ion-button>
+  </div> -->
+
+
+  <ion-list class="listagem" lines="none" *ngFor="let heroi of dadosPagina | async">
+    <ion-card class="card">
+      <ion-card-header>
+        <ion-card-title>{{ heroi.hero }}</ion-card-title>
+        <ion-img class="heroi-img" [src]="heroi.img"></ion-img>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{ heroi.descricao }}
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+
+</ion-content>
